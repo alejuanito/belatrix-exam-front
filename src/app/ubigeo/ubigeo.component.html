@@ -1,0 +1,77 @@
+
+   
+    <div class="card-container">
+        <!-- Progress Bar -->
+        <mat-progress-bar mode="indeterminate" *ngIf="process"></mat-progress-bar>
+
+        <div class="form-group">
+            <input type='file' (change)="fileChanged($event)">
+        </div>
+
+        
+        <div *ngIf="department.length">
+            <h2>Departamentos</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 15%">Código</th>
+                    <th style="width: 30%">Nombre</th>
+                    <th style="width: 8%">Código Padre</th>
+                    <th style="width: 12%" >Descripción Padre</th>
+                  </tr>
+                </thead>
+                <tbody>    
+                  <tr *ngFor="let item of department">
+                    <td>{{item.code }}</td>
+                    <td>{{item.name }}</td>
+                    <td>{{item.fatherCode }}</td>
+                    <td>{{item.fatherName }}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div *ngIf="province.length">
+                <h2>Provincias</h2>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width: 15%">Código</th>
+                        <th style="width: 30%">Nombre</th>
+                        <th style="width: 8%">Código Padre</th>
+                        <th style="width: 12%" >Descripción Padre</th>
+                      </tr>
+                    </thead>
+                    <tbody>    
+                      <tr *ngFor="let item of province">
+                        <td>{{item.code }}</td>
+                        <td>{{item.name }}</td>
+                        <td>{{item.fatherCode }}</td>
+                        <td>{{item.fatherName }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+            <div *ngIf="district.length">
+                    <h2>Distritos</h2>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th style="width: 15%">Código</th>
+                            <th style="width: 30%">Nombre</th>
+                            <th style="width: 8%">Código Padre</th>
+                            <th style="width: 12%" >Descripción Padre</th>
+                          </tr>
+                        </thead>
+                        <tbody>    
+                          <tr *ngFor="let item of district">
+                            <td>{{item.code }}</td>
+                            <td>{{item.name }}</td>
+                            <td>{{item.fatherCode }}</td>
+                            <td>{{item.fatherName }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+    </div>
