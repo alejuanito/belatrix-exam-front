@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
+## Instrucciones
+El siguiente proyecto SPA permite leer un archivo que debe ser seleccionado (/assets) y parsea la información para mostrarla en departamentos provincias y distritos.
+
+## Observaciones
+* Se utilizo angular 8.
+* Se creo un componente
+* No fue necesario modularizarlo ni usar lazy load
+* Se uso un poco de angular material
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
